@@ -1,0 +1,24 @@
+<header-component />
+<main>
+  <ul id="users">
+    <!-- @for(user of users; track user.id){ -->
+    <li *ngFor="let user of users">
+      <app-user
+        [user]="user"
+        (select)="onSelectUser($event)"
+        [selected]="user.id === slectedUserId"
+      />
+    </li>
+    <!-- } -->
+    <!-- @if(slectedUserId){ -->
+    <app-taskname
+      [userId]="selectedUser.id"
+      *ngIf="selectedUser; else fallback"
+      [name]="selectedUser!.name"
+    />
+    <!-- } @else{ -->
+    <ng-template #fallback>
+      <p>Select a user to see their name</p>
+    </ng-template>
+  </ul>
+</main>
