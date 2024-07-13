@@ -5,8 +5,7 @@ import { NewTask } from './task/task.model';
 import { TasksService } from './tasks.service';
 @Component({
   selector: 'app-taskname',
-  standalone: true,
-  imports: [TaskComponent, NewTaskComponent],
+  standalone: false,
   templateUrl: './taskname.component.html',
   styleUrl: './taskname.component.css',
 })

@@ -8,14 +8,14 @@ import {
 } from '@angular/core';
 import { DUMMY_USERS } from '../../dummy-user';
 import { User } from './user.model';
-import { CardComponent } from '../shared/card/card.component';
-import { DatePipe } from '@angular/common';
+// import { CardComponent } from '../shared/card/card.component';
+// import { DatePipe } from '@angular/common';
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [CardComponent, DatePipe],
+  standalone: false,
+  // imports: [CardComponent, DatePipe],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })
